@@ -158,10 +158,7 @@ if ($section == 'category') {
             padding-top: 20px;
             box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
         }
-        #content {
-            margin-left: 250px;
-            padding: 20px;
-        }
+      
         .list-group-item a {
             color: #000000;
             text-decoration: none;
@@ -170,6 +167,11 @@ if ($section == 'category') {
         }
         .list-group-item:hover {
             background-color: #555;
+        }
+
+        #content {
+            margin-left: 250px;
+            padding: 20px;
         }
         .pagination a {
             color: #000;

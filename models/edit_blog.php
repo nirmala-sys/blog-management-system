@@ -73,14 +73,26 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 #sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 250px;
-    height: 100vh; /* Full viewport height */
-    background-color: #343a40;
-    padding-top: 20px;
-}
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100vh;
+            background-color: #343a40;
+            padding-top: 20px;
+            box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+      
+        .list-group-item a {
+            color: #000000;
+            text-decoration: none;
+            display: block;
+            padding: 5px 10px;
+        }
+        .list-group-item:hover {
+            background-color: #555;
+        }
+
 
 #maincontent {
     margin-left: 250px; /* Offset the content to the right of the sidebar */
@@ -96,14 +108,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div id="sidebar" class="col-md-3 bg-dark text-white p-3">
                 <h3>Admin Dashboard</h3>
                 <ul class="list-group">
-                    <li class="list-group-item bg-dark text-white">
-                        <a href="../views/dashboard.php?section=blog" class="text-white">Blog Management</a>
+                    <li class="list-group-item">
+                        <a href="../views/dashboard.php?section=blog" class="list-group-item-action">Blog Management</a>
                     </li>
-                    <li class="list-group-item bg-dark text-white">
-                        <a href="../views/dashboard.php?section=user" class="text-white">User Management</a>
+                    <li class="list-group-item">
+                        <a href="../views/dashboard.php?section=user" class="list-group-item-action">User Management</a>
                     </li>
-                    <li class="list-group-item bg-dark text-white">
-                        <a href="../views/logout.php" class="text-white">Logout</a>
+                    <li class="list-group-item">
+                        <a href="../views/dashboard.php?section=comment" class="list-group-item-action">Comment Moderation</a>
+                    </li>
+                    <li class="list-group-item">
+    <a href="../views/dashboard.php?section=category" class="list-group-item-action">Category Management</a>
+</li>
+<li class="list-group-item">
+    <a href="../views/dashboard.php?section=activity_log" class="list-group-item-action">Activity Log</a>
+</li>
+                    <li class="list-group-item">
+                        <a href="../views/logout.php" class="list-group-item-action">Logout</a>
                     </li>
                 </ul>
             </div>
